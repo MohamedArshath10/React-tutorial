@@ -1,0 +1,12 @@
+nav{
+    display: flex;
+    background-color: blue;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.link{
+    color: white;
+    align-items: end;
+    margin: 20px;
+}
