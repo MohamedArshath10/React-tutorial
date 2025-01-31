@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form{
+    border: 1px solid #cccccc;
+    padding: 12px 10px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+button{
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dataTable{
+    margin-top: 50px;
+}
+
+.editBtn{
+    background-color: yellow;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.deleteBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table,
+tr,
+td,
+th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 12px;
+}
