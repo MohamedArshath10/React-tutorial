@@ -50,8 +50,29 @@ const App = () => {
     setUserInfo(user)
     setButtonState("edit")
   }
+
+  const cancelEditing = () => {
+    setUserInfo({
+      id: uuidv4(),
+      name: '',
+      age:'',
+      email: '',
+      phone: '',
+  })
+  setButtonState("add")
+  }
   
-  
+  const updateData = (updatedInfo) => {
+    setUser((currUser) => {
+      return currUser.map((user) => {
+        if (user.id === userInfo.id){
+          return userInfo
+        }
+        return user
+      })
+    })
+    cancelEditing()
+  }
 
 
   return (
@@ -66,7 +87,10 @@ const App = () => {
         <input  className='form' type="number" placeholder='Enter your number' value={userInfo.phone} name='phone' onChange={handleClick}/>
         <br />
         {
-          buttonState === "add" ? <button onClick={addData}>ADD</button> : <button onClick={addData}>UPDATE</button>
+          buttonState === "add" ? <button onClick={addData}>ADD</button> : <div>
+            <button onClick={updateData}>UPDATE</button>
+            <button onClick={cancelEditing}>Cancel</button>
+          </div>
         }
       </div>
       <div className='dataTable'>
